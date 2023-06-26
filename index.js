@@ -37,6 +37,9 @@ $(function () {
     $.ajax({
         type: "GET",
         url: "https://powerbiembeddedwebapp.azurewebsites.net/embedinfo/getembedinfo",
+        headers: {
+            'Access-Control-Allow-Origin': 'https://purple-plant-06e7ead1e.3.azurestaticapps.net'
+        },
         success: function (data) {
             embedParams = $.parseJSON(data);
             reportLoadConfig = {
