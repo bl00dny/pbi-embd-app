@@ -1,0 +1,6 @@
+{
+  "globalHeaders": {
+    "Access-Control-Allow-Origin": "https://purple-plant-06e7ead1e.3.azurestaticapps.net",
+    "Access-Control-Allow-Methods": "POST, GET, OPTIONS"
+  }
+}
