@@ -37,6 +37,9 @@ $(function () {
     $.ajax({
         type: "GET",
         url: "https://powerbiembeddedwebapp.azurewebsites.net/embedinfo/getembedinfo",
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+        },
         success: function (data) {
             embedParams = $.parseJSON(data);
             reportLoadConfig = {
