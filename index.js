@@ -36,7 +36,7 @@ $(function () {
 
     $.ajax({
         type: "GET",
-        url: "https://localhost:44365/embedinfo/getembedinfo",
+        url: "https://powerbiembeddedwebapp.azurewebsites.net/embedinfo/getembedinfo",
         success: function (data) {
             embedParams = $.parseJSON(data);
             reportLoadConfig = {
