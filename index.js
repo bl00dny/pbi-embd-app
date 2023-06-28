@@ -3,7 +3,7 @@
 // Licensed under the MIT license.
 // ----------------------------------------------------------------------------
 
-$(function () {
+// $(function () {
     var models = window["powerbi-client"].models;
     var reportContainer = $("#report-container").get(0);
 	
@@ -118,4 +118,4 @@ $(function () {
             errorContainer.append(errMessageHtml);
         }
     });
-});
+// });
