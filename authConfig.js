@@ -37,7 +37,7 @@ const msalConfig = {
 
 // Add here scopes for id token to be used at MS Identity Platform endpoints.
 const loginRequest = {
-    scopes: ["User.Read"]
+    scopes: ["User.Read", "api://0ef872a3-59a3-483d-a0bf-d287d73def4b/PowerBI.GetToken"]
 };
 
 // Add here the endpoints for MS Graph API services you would like to use.
