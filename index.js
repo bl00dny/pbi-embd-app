@@ -6,6 +6,14 @@
 $(function () {
     var models = window["powerbi-client"].models;
     var reportContainer = $("#report-container").get(0);
+	
+	const currentAcc = myMSALObj.getAccountByHomeId(accountId);
+	
+	 if (currentAcc) {
+        const response = await getTokenRedirect(loginRequest, currentAcc).catch(error => {
+            console.log(error);
+        });
+	 }
 
     const basicFilter = {
         $schema: "http://powerbi.com/product/schema#basic",
@@ -39,7 +47,7 @@ $(function () {
         url: "https://powerbiembeddedwebapp.azurewebsites.net/embedinfo/getembedinfo",
         headers: {
             'Access-Control-Allow-Origin': '*',
-			'Authorization': `Bearer ${accessToken}`,
+			'Authorization': `Bearer ${response.accessToken}`,
         },
         success: function (data) {
             embedParams = $.parseJSON(data);
