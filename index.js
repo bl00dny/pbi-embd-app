@@ -9,11 +9,11 @@
 	
 	const currentAcc = myMSALObj.getAccountByHomeId(accountId);
 	
-	 if (currentAcc) {
-        const response = await getTokenRedirect(loginRequest, currentAcc).catch(error => {
+	if (currentAcc) {
+        const response = getTokenRedirect(loginRequest, currentAcc).catch(error => {
             console.log(error);
         });
-	 }
+	}
 
     const basicFilter = {
         $schema: "http://powerbi.com/product/schema#basic",
