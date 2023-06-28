@@ -39,6 +39,7 @@ $(function () {
         url: "https://powerbiembeddedwebapp.azurewebsites.net/embedinfo/getembedinfo",
         headers: {
             'Access-Control-Allow-Origin': '*',
+			'Authorization': `Bearer ${accessToken}`,
         },
         success: function (data) {
             embedParams = $.parseJSON(data);
