@@ -14,6 +14,8 @@
             console.log(error);
         });
 	}
+	
+	console.warn(response);
 
     const basicFilter = {
         $schema: "http://powerbi.com/product/schema#basic",
